@@ -1,0 +1,27 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    def gprUser = "thetruong1099"
+    def gprToken = "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"
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven {
+            url = uri("https://maven.pkg.github.com/trustwallet/wallet-core")
+            credentials {
+                username = gprUser
+                password = gprToken
+            }
+        }
+    }
+}
+
+rootProject.name = "testCryptoWallet"
+include ':app'
