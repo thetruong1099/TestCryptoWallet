@@ -1,13 +1,9 @@
-package co.dss.testcryptowallet
+package co.dss.testcryptowallet.util
 
 import org.web3j.protocol.Web3j
-import co.dss.testcryptowallet.ERC721
 import org.web3j.tx.gas.ContractGasProvider
 import org.web3j.abi.datatypes.generated.Uint256
-import org.web3j.tx.Contract.EventValuesWithLog
 import org.web3j.abi.EventEncoder
-import co.dss.testcryptowallet.ERC721.ApprovalEventResponse
-import co.dss.testcryptowallet.ERC721.ApprovalForAllEventResponse
 import io.reactivex.Flowable
 import io.reactivex.functions.Function
 import org.web3j.abi.TypeReference

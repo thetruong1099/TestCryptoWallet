@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TestCryptoWallet">
         <activity
+            android:name=".BSCActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EthActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

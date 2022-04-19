@@ -7,7 +7,7 @@ pluginManagement {
 }
 dependencyResolutionManagement {
     def gprUser = "thetruong1099"
-    def gprToken = "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"
+    def gprToken = "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"
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()

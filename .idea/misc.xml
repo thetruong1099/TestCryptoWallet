@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/TEST/testCryptoWallet/app/src/main/res/layout/activity_bsc.xml" value="0.25" />
+        <entry key="..\:/Android/TEST/testCryptoWallet/app/src/main/res/layout/activity_bscactivity.xml" value="0.2359375" />
+        <entry key="..\:/Android/TEST/testCryptoWallet/app/src/main/res/layout/activity_comos.xml" value="0.22826086956521738" />
+        <entry key="..\:/Android/TEST/testCryptoWallet/app/src/main/res/layout/activity_eth.xml" value="0.22826086956521738" />
         <entry key="..\:/Android/TEST/testCryptoWallet/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/code/Android/TEST/testCryptoWallet/app/src/main/res/layout/activity_eth.xml" value="0.25" />
       </map>
     </option>
   </component>

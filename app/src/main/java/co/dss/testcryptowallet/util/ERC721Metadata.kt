@@ -1,7 +1,6 @@
-package co.dss.testcryptowallet
+package co.dss.testcryptowallet.util
 
 import org.web3j.protocol.Web3j
-import co.dss.testcryptowallet.ERC721Metadata
 import org.web3j.abi.TypeReference
 import org.web3j.abi.datatypes.Function
 import org.web3j.abi.datatypes.Type
