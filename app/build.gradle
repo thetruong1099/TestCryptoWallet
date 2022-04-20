@@ -51,7 +51,7 @@ dependencies {
 
     implementation 'org.web3j:core:5.0.0'
     implementation 'com.trustwallet:wallet-core:2.7.2'
-    implementation 'com.github.centerprime:Binance-Chain-Client-SDK:1.2.2'
+//    implementation 'com.github.centerprime:Binance-Chain-Client-SDK:1.2.2'
 //    implementation group: 'com.binance.dex.api', name: 'binance-dex-api-client', version: '1.1.2'
 //    implementation 'com.binance.dex.api:binance-dex-api-client:1.1.2'
 }
