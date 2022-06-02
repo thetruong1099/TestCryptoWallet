@@ -6,7 +6,6 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import co.dss.testcryptowallet.databinding.ActivityBscBinding
 import co.dss.testcryptowallet.util.ERC20
-import com.centerprime.binance_smart_chain_sdk.BinanceManager
 import org.web3j.crypto.*
 import org.web3j.protocol.Web3j
 import org.web3j.protocol.core.DefaultBlockParameterName

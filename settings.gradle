@@ -7,7 +7,7 @@ pluginManagement {
 }
 dependencyResolutionManagement {
     def gprUser = "thetruong1099"
-    def gprToken = "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"
+    def gprToken = "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"
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
@@ -15,6 +15,14 @@ dependencyResolutionManagement {
         maven { url 'https://jitpack.io' }
         maven {
             url = uri("https://maven.pkg.github.com/trustwallet/wallet-core")
+            credentials {
+                username = gprUser
+                password = gprToken
+            }
+        }
+
+        maven {
+            url = uri("https://maven.pkg.github.com/komputing/KHex")
             credentials {
                 username = gprUser
                 password = gprToken
