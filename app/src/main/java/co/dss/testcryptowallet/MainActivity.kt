@@ -32,8 +32,10 @@ class MainActivity : AppCompatActivity() {
         startBSCActivity()
 
         binding.btnTest.setOnClickListener {
+            //testGenAddressEth()
+            testGenAddressSOL()
 //            testPrivateKeyBtc()
-            testPrivateKeySOL()
+//            testPrivateKeySOL()
         }
     }
 
@@ -51,32 +53,56 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun testPrivateKeyBtc() {
-/*
+    private fun testGenAddressEth() {
         val wallet = HDWallet(
             "grow casual inherit run grant circle debate quit planet tide blanket only",
             ""
         )
 
-        val account = wallet.getAddressForCoin(CoinType.BITCOIN)
+        val key = wallet.getKey(CoinType.ETHEREUM, "m/44\'/60\'/0\'/0/0")
+        val address = CoinType.ETHEREUM.deriveAddress(key)
+        Log.d("testApp", "testGenAddressEth: $address")
+    }
 
-        Log.d("walletTest", "testPrivateKey account: ${account}")
-
-        val privateKey = wallet.getKeyForCoin(CoinType.BITCOIN)
-
-        val privateKeyHex = privateKey.data().toHex()
-
-        val privateKeyWIFHex = "80${privateKeyHex}01"
-
-        Log.d(
-            "walletTest",
-            "testPrivateKey private key: ${Base58.encode(privateKeyWIFHex.toHexByteArray())}"
+    private fun testGenAddressSOL() {
+        val wallet = HDWallet(
+            "grow casual inherit run grant circle debate quit planet tide blanket only",
+            ""
         )
 
-        val privateKeyByteArray = privateKeyWIFHex.toHexByteArray().sha256().toHex()
+        for (i in 0..100) {
+            val key = wallet.getKey(CoinType.SOLANA, "m/44'/501'/$i'") //"m/44'/501'/$i'/0'" //"m/44'/501'/$i'/0"
+            val address = CoinType.SOLANA.deriveAddress(key)
+            Log.d("testApp", "testGenAddressSOL $i: $address")
+        }
+    }
 
-//        val privKeyByteArray = privKeyWIFHex.toHexByteArray()
-*/
+    private fun testPrivateKeyBtc() {
+        /*
+            val wallet = HDWallet(
+                "grow casual inherit run grant circle debate quit planet tide blanket only",
+                ""
+            )
+
+            val account = wallet.getAddressForCoin(CoinType.BITCOIN)
+
+            Log.d("walletTest", "testPrivateKey account: ${account}")
+
+            val privateKey = wallet.getKeyForCoin(CoinType.BITCOIN)
+
+            val privateKeyHex = privateKey.data().toHex()
+
+            val privateKeyWIFHex = "80${privateKeyHex}01"
+
+            Log.d(
+                "walletTest",
+                "testPrivateKey private key: ${Base58.encode(privateKeyWIFHex.toHexByteArray())}"
+            )
+
+            val privateKeyByteArray = privateKeyWIFHex.toHexByteArray().sha256().toHex()
+
+    //        val privKeyByteArray = privKeyWIFHex.toHexByteArray()
+    */
 
 
         val priv = Base58.decode("KzWW1aMV394YDBymPUZenp6uAfsXKGHMjqGgvuG14GAMf7i1JaYv").toHex()
@@ -91,7 +117,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun testPrivateKeySOL() {
-/*        val wallet = HDWallet(
+        val wallet = HDWallet(
             "cloth upper tobacco vital vacuum outer dry spoon pledge village stone pave",
             ""
         )
@@ -100,7 +126,7 @@ class MainActivity : AppCompatActivity() {
 
         Log.d("walletTest", "testPrivateKey account: ${account}")
 
-        val privateKey = wallet.getKeyForCoin(CoinType.SOLANA)
+        /*val privateKey = wallet.getKeyForCoin(CoinType.SOLANA)
 
         val privateKeyHex = privateKey.data().toHex()
 
@@ -131,5 +157,4 @@ class MainActivity : AppCompatActivity() {
             "testPrivateKey private key: ${valid}"
         )
     }
-
 }
